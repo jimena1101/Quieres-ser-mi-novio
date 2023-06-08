@@ -1,44 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quieres ser mi novio</title>
     <style>
-        .body{
+        .body {
             background-color: rosybrown;
             text-align: center;
         }
-        .body__title{
-            color: azure;
+
+        .body__tittle {
+            color: white;
         }
-        .body__img{
-            width: 40%;
-            border-radius: 40%;
+
+        .body__img {
+            width: 256%;
+            max-width: 256px;
+            object-fit: cover;
+            border-radius: 50%;
         }
     </style>
 </head>
+
 <body class="body">
     <h1 class="body__tittle">Quieres ser mi novio</h1>
-    <img src="https://pm1.narvii.com/6208/64625f1477f1e7eb85ead4fad9f61a298d3d69dd_00.jpg" alt="foto de no mi" class="body__img">
+    <img src="https://pm1.narvii.com/6208/64625f1477f1e7eb85ead4fad9f61a298d3d69dd_00.jpg" alt="foto de no mi"
+        width="456.234" height="256" class="body__img">
     <button id="yes">si soy</button>
-    <button id="no"> 5 comentario</button>
+    <button id="no"> 5 </button>
     <script>
-      const vutonSi = document.getElementById('yes');
-      const vutonNo = document.getElementById('no');
-      
-      const somosnovios = () => {
-        alert('Me dijo que si');
-        alert('Nos casarems a en el año 3000');
-        location.href= 'https://www.youtube.com/watch?v=wHN_D7Hcpjc=3.22m';
-        }
+        const vutonyes = document.getElementById('yes');
+        const vutonno = document.getElementById('no');
 
-        const evitarqueserompamicorazon =() =>{
-            vutonNo.style.position ='absolute';
-            vutonNo.style.top = (Math.random())
-        }
+        vutonyes.addEventListener('click', () => {
+            alert('Me dijo que si');
+            alert('Nos casaremos en el año 3000');
+            window.location.href = 'https://www.youtube.com/watch?v=wHN_D7Hcpjc=38s';
+        });
+
+        const evitarqueserompamicorazon = () => {
+            vutonno.style.position = 'absolute';
+            vutonno.style.top = (Math.random() * window.innerHeight + 'px');
+            vutonno.style.left = (Math.random() * window.innerWidth + 'px');
+        };
+
+        vutonno.addEventListener('mouseover', evitarqueserompamicorazon);
+
+
+
 
     </script>
-</body >
+</body>
+
 </html>
